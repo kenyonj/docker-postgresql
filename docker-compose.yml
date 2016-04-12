@@ -3,7 +3,8 @@ PostgreSQL:
   image: sameersbn/postgresql:9.4-18
   net: "host"
   environment:
-    - DEBUG=false
     - PG_TRUST_LOCALNET=true
+    - DB_USER=$USER
+    - DB_PASS=doesnotmatter
   volumes:
     - /srv/docker/postgresql:/var/lib/postgresql
